@@ -1,0 +1,43 @@
+feat: 새로운 기능 추가 (MINOR 버전 증가)
+
+예: feat(auth): add login form
+
+fix: 버그 수정 (PATCH 버전 증가)
+
+예: fix(parser): handle array parsing issue
+
+docs: 문서 수정
+
+예: docs: update README with new API usage examples
+
+style: 코드 스타일 수정 (기능 변경 없음)
+
+예: style: fix indentation in API routes
+
+refactor: 코드 리팩토링 (기능 변경 없음)
+
+예: refactor(api): optimize query logic
+
+test: 테스트 코드 추가/수정
+
+예: test(auth): add tests for login functionality
+
+chore: 기타 잡일 (빌드, 설정 등)
+
+예: chore: update dependencies
+
+perf: 성능 개선
+
+예: perf(api): optimize image loading
+
+build: 빌드 시스템 관련 변경
+
+예: build: add Webpack configuration for production
+
+ci: CI/CD 관련 수정
+
+예: ci: configure GitHub Actions for testing
+
+BREAKING CHANGE: API 또는 중요한 기능 변경 (MAJOR 버전 증가)
+
+예: feat(api)!: change authentication method
