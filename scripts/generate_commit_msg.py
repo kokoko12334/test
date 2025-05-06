@@ -38,9 +38,7 @@ def generate_commit_message(diff_content: Dict):
     for file, diff in diff_content.items():
         # 커밋 메시지 생성
         message = ""
-        message += file
-        message += "\t"
-        message += diff
+        message += file + " change"
 
         # 메시지 구성
         commit_data["items"].append({
