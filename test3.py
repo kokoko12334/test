@@ -1,1 +1,2 @@
 print("DDD")
+print()
