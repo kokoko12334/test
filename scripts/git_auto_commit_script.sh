@@ -56,8 +56,8 @@ for ((i=0; i<COMMIT_COUNT; i++)); do
   print_item "커밋 $((i+1)). ${FILES}\n"
 done
 print_step "총 ${COMMIT_COUNT}개의 커밋이 처리될 예정입니다"
-read -p "⏎ 엔터를 누르면 커밋을 시작합니다..."
-
+echo -e "⏎ 엔터를 누르면 커밋을 시작합니다..."
+read
 
 # 스테이지된 모든 변경사항 초기화
 print_step "스테이지된 변경사항 초기화 중..."
