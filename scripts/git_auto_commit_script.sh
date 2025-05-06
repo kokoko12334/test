@@ -90,7 +90,7 @@ for ((i = 0; i < COMMIT_COUNT; i++)); do
 
     # 커밋 수행
     print_item "커밋 메시지: $MESSAGE"
-    GIT_EDITOR=true git commit -m "$MESSAGE"
+    git commit -m "$MESSAGE"
 
     # 커밋 성공 여부 확인
     if [ $? -eq 0 ]; then
