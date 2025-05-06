@@ -41,3 +41,8 @@ ci: CI/CD 관련 수정
 BREAKING CHANGE: API 또는 중요한 기능 변경 (MAJOR 버전 증가)
 
 예: feat(api)!: change authentication method
+
+- git bash에서 jq설치(관리자권한)
+curl -L -o /usr/bin/jq.exe https://github.com/jqlang/jq/releases/latest/download/jq-win64.exe
+
+jq --version
