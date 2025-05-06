@@ -121,6 +121,7 @@ def request_openai(input_message, prompt):
 
 
 def main():
+    sys.stdout.reconfigure(encoding='utf-8')
     
     # 스테이징된 파일 목록 가져오기
     staged_files = sys.argv[1].split() if len(sys.argv) >= 1 else []
