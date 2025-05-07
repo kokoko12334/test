@@ -41,11 +41,7 @@ BREAKING CHANGE: Major breaking changes (increases MAJOR version)
 Rules:
 
 Group related file changes under a single commit message when appropriate.
-
 Unrelated file changes should be separated into different commit messages.
-
 The "file" array in the JSON must list all files included in that commit.
-
 Messages should be concise, clear, and informative.
-
 Follow the format exactly, with proper commit type and clear message in korean.
