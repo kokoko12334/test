@@ -1,2 +1,1 @@
 print("DDD")
-print("dddddddddddddddddddddd")
