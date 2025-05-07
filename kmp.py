@@ -1,2 +1,0 @@
-print("kmp")
-print("kmp")
