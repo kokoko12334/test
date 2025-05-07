@@ -2,7 +2,6 @@
 import os
 import sys
 import subprocess
-import re
 from typing import Dict, List
 import json
 import requests
