@@ -28,8 +28,8 @@ print_error() {
     echo -e "${RED}오류:${NC} $1"
 }
 
-# JSON 데이터 파싱
-GENERATED_JSON="$1"
+# JSON 파일 변수로 받기
+GENERATED_JSON=$1
 
 if [ -z "$GENERATED_JSON" ]; then
     print_error "JSON 데이터가 제공되지 않았습니다."
@@ -82,15 +82,9 @@ for ((i = 0; i < COMMIT_COUNT; i++)); do
         fi
     done
 
-    # 변경사항 확인
-    echo
-    print_item "변경사항 요약:"
-    git status --short
-    echo
-
     # 커밋 수행
     print_item "커밋 메시지: $MESSAGE"
-    git commit --no-verify -m "$MESSAGE"
+    git commit -m "$MESSAGE"
 
     # 커밋 성공 여부 확인
     if [ $? -eq 0 ]; then
