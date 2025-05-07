@@ -1,1 +1,2 @@
 print("kmp")
+print("kmp")
