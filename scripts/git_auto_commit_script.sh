@@ -62,10 +62,10 @@ for ((i = 0; i < COMMIT_COUNT; i++)); do
     MESSAGE=$(echo "$GENERATED_JSON" | jq -r ".items[$i].message")
 
     print_step ""
-    echo -e "${BLUE}🔍 커밋 ${i+1}/${COMMIT_COUNT} 요약:${NC}"
+    echo -e "${BLUE}🔍 커밋 $((i + 1))/${COMMIT_COUNT} 요약:${NC}"
     echo -e "   ${GREEN}• 파일: ${NC}$(echo "$FILES_JSON" | jq -r '. | join(", ")')"
     echo -e "   ${GREEN}• 메시지: ${NC}${YELLOW}${MESSAGE}${NC}"
-    echo -e "${YELLOW}⏎ 계속하려면 엔터를 누르세요...${NC}"
+    echo -e "${YELLOW}⏎ 계속 진행하려면 엔터를 누르세요...${NC}"
     read </dev/tty
 
     print_step "커밋 $((i + 1))/$COMMIT_COUNT 처리 중..."
