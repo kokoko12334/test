@@ -61,7 +61,7 @@ def generate_commit_message(diff_content: Dict, prompt: str) -> str:
         if "status" in info.keys():
             change_type = info["status"]
         
-        input_message += f"### File: {file} ({change_type})\n"
+        input_message += f"File: {file} ({change_type})\n"
 
         lines = diff.splitlines()
         filtered_lines = []
@@ -71,7 +71,7 @@ def generate_commit_message(diff_content: Dict, prompt: str) -> str:
             if line.startswith(('@@')):
                 filtered_lines.append(line)
             elif line.startswith(('+', '-')) and not line.startswith(('+++', '---')):
-                content = line[1:].strip()
+                content = line.strip()
                 if content:
                     filtered_lines.append(line)
 
@@ -90,7 +90,7 @@ def request_openai(input_message, prompt):
 
     # 요청 본문 구성
     payload = {
-        "model": "gpt-4.1-nano-2025-04-14",
+        "model": "gpt-4.1-mini-2025-04-14",
         "instructions": prompt,
         "input": input_message
     }
@@ -124,7 +124,6 @@ def main():
     
     # 스테이징된 파일 목록 가져오기
     staged_files = sys.argv[1].split() if len(sys.argv) >= 1 else []
-
     # prompt 가져오기
     prompt_path = "./scripts/prompt.txt"
     try:
@@ -135,6 +134,7 @@ def main():
 
     # 파일 변경 내용 가져오기
     diff_content = get_diff_content(staged_files)
+    
     # 커밋 메시지 생성
     commit_message = generate_commit_message(diff_content, prompt)
     
