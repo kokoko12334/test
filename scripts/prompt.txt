@@ -39,7 +39,6 @@ build: Build system or dependency changes
 ci: Changes related to CI/CD configuration
 merge: conflitcts solved
 
-
 Group related file changes under a single commit message when appropriate.  
 Unrelated file changes should be separated into different commit messages.  
 Focus on a single task and purpose in each commit.  
