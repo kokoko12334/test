@@ -37,7 +37,7 @@ chore: Miscellaneous tasks (e.g., build tools, dependencies)
 perf: Performance improvements
 build: Build system or dependency changes
 ci: Changes related to CI/CD configuration
-BREAKING CHANGE: Major breaking changes (increases MAJOR version)
+merge: conflitcts solved
 
 
 Group related file changes under a single commit message when appropriate.  
